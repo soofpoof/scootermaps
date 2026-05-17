@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data — OSM extracts are large, fetched by scripts/download_data.py
+data/
+
+# osmnx HTTP cache
+cache/
+
+# Claude Code session internals
+.claude/
+
+# Backend startup log
+install.log
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Logs
+*.log

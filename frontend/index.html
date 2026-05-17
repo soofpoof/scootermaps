@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scootermaps · Amsterdam</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside id="ui">
+      <h1>scootermaps</h1>
+      <p class="tagline">
+        Amsterdam scooter routing that actually follows the rules.
+      </p>
+
+      <fieldset class="controls">
+        <legend>Scooter type</legend>
+        <label>
+          <input type="radio" name="profile" value="snorfiets" checked />
+          Snorfiets <span class="muted">(blauw · 25 km/h)</span>
+        </label>
+        <label>
+          <input type="radio" name="profile" value="bromfiets" />
+          Bromfiets <span class="muted">(geel · 45 km/h)</span>
+        </label>
+      </fieldset>
+
+      <div id="instructions">
+        Click the map: first click sets the start, second click sets the
+        destination.
+      </div>
+
+      <dl id="stats" hidden>
+        <div>
+          <dt>Distance</dt>
+          <dd id="stat-distance">—</dd>
+        </div>
+        <div>
+          <dt>Travel time</dt>
+          <dd id="stat-duration">—</dd>
+        </div>
+      </dl>
+
+      <button id="reset">Reset</button>
+
+      <footer>
+        <span class="badge">v0.1 · live routing on OSM data</span>
+      </footer>
+    </aside>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
